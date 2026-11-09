@@ -25,6 +25,22 @@ def voto(msg):
     s = (m.group(1) or m.group(2) or "").lower()
     return "1" if s in ("1", "um", "1️⃣") else "2"
 
+# Molde v4: o voto da continuação é A/B e a escolha relâmpago é 1/2/3.
+AB = re.compile(r"^\W*(🅰️|🅱️|[abAB])\W*$|^\W*(🅰️|🅱️|[AB])\b")
+def voto_ab(msg):
+    t = (msg or "").strip()
+    m = AB.search(t)
+    if not m: return None
+    if m.group(2) and len(t) > 25: return None
+    s = (m.group(1) or m.group(2)).lower()
+    return "A" if s in ("a", "🅰️") else "B"
+NUM = re.compile(r"^\W*(1|2|3|um|dois|tr[eê]s|1️⃣|2️⃣|3️⃣)(\b|\W|$)", re.I)
+def escolha(msg):
+    m = NUM.search((msg or "").strip())
+    if not m: return None
+    s = m.group(1).lower()
+    return {"um": "1", "1️⃣": "1", "dois": "2", "2️⃣": "2", "três": "3", "tres": "3", "3️⃣": "3"}.get(s, s)
+
 contas = {a.get("_id") or a.get("id"): a for a in get("/accounts").get("accounts", [])
           if "penumbra" in f'{a.get("username","")} {a.get("displayName","")}'.lower()}
 desde = (datetime.now(timezone.utc) - timedelta(days=60)).strftime("%Y-%m-%d")
@@ -43,11 +59,16 @@ for status in ("published", "partial"):
             r = {"url": pl.get("platformPostUrl"), "status": pl.get("status")}
             c = get(f'/inbox/comments/{p.get("_id")}', accountId=acc, platform=rede, limit=100)
             coms = c.get("comments") or c.get("data") or []
-            votos = {"1": 0, "2": 0}
+            votos = {"1": 0, "2": 0}; ab = {"A": 0, "B": 0}; num = {"1": 0, "2": 0, "3": 0}
             for k in coms:
-                v = voto(k.get("message") or k.get("text") or "")
+                txt = k.get("message") or k.get("text") or ""
+                v = voto(txt)
                 if v: votos[v] += 1
-            r["comentarios_lidos"] = len(coms); r["votos"] = votos
+                w = voto_ab(txt)
+                if w: ab[w] += 1
+                n = escolha(txt)
+                if n: num[n] += 1
+            r["comentarios_lidos"] = len(coms); r["votos"] = votos; r["votos_ab"] = ab; r["escolha_123"] = num
             item["redes"][rede] = r
 
 for rede in ("tiktok", "instagram", "youtube"):
@@ -64,5 +85,9 @@ for vid, it in saida["posts"].items():
     for r in it["redes"].values():
         for k in t: t[k] += r.get("votos", {}).get(k, 0)
     it["votos_total"] = t
+    for chave, base in (("votos_ab", {"A": 0, "B": 0}), ("escolha_123", {"1": 0, "2": 0, "3": 0})):
+        for r in it["redes"].values():
+            for k in base: base[k] += r.get(chave, {}).get(k, 0)
+        it[chave + "_total"] = base
 json.dump(saida, open("metricas.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(json.dumps({k: v.get("votos_total") for k, v in saida["posts"].items()}, ensure_ascii=False))
