@@ -68,3 +68,5 @@ for p in json.load(open("posts.json", encoding="utf-8")):
     chave = str(uuid.uuid5(uuid.NAMESPACE_URL, RAW + p["video"] + "|" + p.get("capa", "") + "|" + p["quando"]))
     st, r = call("POST", "/posts", body, {"Idempotency-Key": chave})
     print(p["id"], st, (r.get("post", {}).get("status") if isinstance(r, dict) else r))
+    if st >= 300: falhas = globals().setdefault("falhas", []); falhas.append(p["id"])
+if globals().get("falhas"): sys.exit(f"Falhou: {falhas}")
