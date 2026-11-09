@@ -65,7 +65,7 @@ for p in json.load(open("posts.json", encoding="utf-8")):
     for old in agendados:
         if RAW + p["video"] in " ".join(m.get("url", "") for m in old.get("mediaItems", [])):
             print("  removendo agendamento antigo", old["_id"], call("DELETE", f'/posts/{old["_id"]}')[0])
-    chave = str(uuid.uuid5(uuid.NAMESPACE_URL, RAW + p["video"] + "|" + p.get("capa", "") + "|" + p["quando"]))
+    chave = str(uuid.uuid5(uuid.NAMESPACE_URL, RAW + p["video"] + "|" + p.get("capa", "") + "|" + p["quando"] + "|" + p["legenda"] + "|" + str(os.path.getmtime(p["video"]) if os.path.exists(p["video"]) else "")))
     st, r = call("POST", "/posts", body, {"Idempotency-Key": chave})
     print(p["id"], st, (r.get("post", {}).get("status") if isinstance(r, dict) else r))
     if st >= 300: falhas = globals().setdefault("falhas", []); falhas.append(p["id"])
