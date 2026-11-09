@@ -1,0 +1,28 @@
+name: Publicar no Zernio
+on:
+  push:
+    branches: [main]
+    paths: [posts.json]
+  workflow_dispatch:
+    inputs:
+      acao:
+        type: choice
+        options: [publicar, status]
+        default: publicar
+      teste:
+        description: "Só testar (não publica)"
+        type: boolean
+        default: false
+      so:
+        description: "Só este post (ex.: casa_da_vo_parte1). Vazio = todos"
+        default: ""
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python ${{ inputs.acao == 'status' && 'status.py' || 'publicar.py' }}
+        env:
+          TESTE: ${{ inputs.teste || 'false' }}
+          SO: ${{ inputs.so }}
+          ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
