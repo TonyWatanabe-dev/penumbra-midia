@@ -1,0 +1,24 @@
+name: Primeiro comentário (TikTok e YouTube)
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [comentar.py]
+permissions:
+  contents: write
+concurrency: comentarios
+jobs:
+  comentar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python comentar.py
+        env:
+          ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
+      - run: |
+          git config user.name "penumbra-bot"
+          git config user.email "penumbra-bot@users.noreply.github.com"
+          git add comentados.json
+          git diff --cached --quiet || (git commit -m "comentários $(date -u +%FT%H:%M)" && git pull --rebase -q && git push)
