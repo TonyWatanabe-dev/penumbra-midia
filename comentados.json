@@ -6,5 +6,11 @@
  "casa_da_vo_parte1:youtube": {
   "ok": true,
   "pulado": "já passou do voto"
+ },
+ "casa_da_vo_parte2:youtube": {
+  "ok": true,
+  "code": 200,
+  "alvo": "naQwwlCo8aI",
+  "resposta": "ok"
  }
 }
