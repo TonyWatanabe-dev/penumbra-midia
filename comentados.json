@@ -24,5 +24,17 @@
   "code": 200,
   "alvo": "9clUKPajv5M",
   "resposta": "ok"
+ },
+ "espelho_parte1:tiktok": {
+  "ok": true,
+  "code": 200,
+  "alvo": "7706930039740288264",
+  "resposta": "ok"
+ },
+ "espelho_parte1:youtube": {
+  "ok": true,
+  "code": 200,
+  "alvo": "tmz3ipzp6WU",
+  "resposta": "ok"
  }
 }
