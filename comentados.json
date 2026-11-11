@@ -12,5 +12,17 @@
   "code": 200,
   "alvo": "naQwwlCo8aI",
   "resposta": "ok"
+ },
+ "avulso_companheiro:tiktok": {
+  "ok": true,
+  "code": 200,
+  "alvo": "7706651168407063828",
+  "resposta": "ok"
+ },
+ "avulso_companheiro:youtube": {
+  "ok": true,
+  "code": 200,
+  "alvo": "9clUKPajv5M",
+  "resposta": "ok"
  }
 }
