@@ -1,6 +1,78 @@
 {
- "atualizado": "2026-11-11T13:50:04.671676+00:00",
+ "atualizado": "2026-11-12T00:15:57.377950+00:00",
  "posts": {
+  "espelho/parte1.mp4": {
+   "publicado": "2026-11-11T15:00:00.000Z",
+   "redes": {
+    "instagram": {
+     "url": "https://www.instagram.com/reel/Dfmwszvj5xc/",
+     "status": "published",
+     "comentarios_lidos": 1,
+     "votos": {
+      "1": 0,
+      "2": 0
+     },
+     "votos_ab": {
+      "A": 0,
+      "B": 0
+     },
+     "escolha_123": {
+      "1": 0,
+      "2": 0,
+      "3": 0
+     }
+    },
+    "tiktok": {
+     "url": "https://www.tiktok.com/@penumbra067/video/7706930039740288264",
+     "status": "published",
+     "comentarios_lidos": 4,
+     "votos": {
+      "1": 3,
+      "2": 0
+     },
+     "votos_ab": {
+      "A": 0,
+      "B": 0
+     },
+     "escolha_123": {
+      "1": 3,
+      "2": 0,
+      "3": 0
+     }
+    },
+    "youtube": {
+     "url": "https://www.youtube.com/watch?v=tmz3ipzp6WU",
+     "status": "published",
+     "comentarios_lidos": 3,
+     "votos": {
+      "1": 0,
+      "2": 0
+     },
+     "votos_ab": {
+      "A": 0,
+      "B": 0
+     },
+     "escolha_123": {
+      "1": 0,
+      "2": 0,
+      "3": 0
+     }
+    }
+   },
+   "votos_total": {
+    "1": 3,
+    "2": 0
+   },
+   "votos_ab_total": {
+    "A": 0,
+    "B": 0
+   },
+   "escolha_123_total": {
+    "1": 3,
+    "2": 0,
+    "3": 0
+   }
+  },
   "avulsos/companheiro.mp4": {
    "publicado": "2026-11-10T21:00:00.000Z",
    "redes": {
