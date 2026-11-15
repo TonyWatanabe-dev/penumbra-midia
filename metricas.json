@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-15T05:37:18.630056+00:00",
+ "atualizado": "2026-11-15T13:41:09.349552+00:00",
  "posts": {
   "espelho/parte1.mp4": {
    "publicado": "2026-11-11T15:00:00.000Z",
@@ -25,9 +25,9 @@
     "tiktok": {
      "url": "https://www.tiktok.com/@penumbra067/video/7706930039740288264",
      "status": "published",
-     "comentarios_lidos": 4,
+     "comentarios_lidos": 0,
      "votos": {
-      "1": 3,
+      "1": 0,
       "2": 0
      },
      "votos_ab": {
@@ -35,7 +35,7 @@
       "B": 0
      },
      "escolha_123": {
-      "1": 3,
+      "1": 0,
       "2": 0,
       "3": 0
      }
@@ -60,7 +60,7 @@
     }
    },
    "votos_total": {
-    "1": 3,
+    "1": 0,
     "2": 0
    },
    "votos_ab_total": {
@@ -68,7 +68,7 @@
     "B": 0
    },
    "escolha_123_total": {
-    "1": 3,
+    "1": 0,
     "2": 0,
     "3": 0
    }
@@ -291,6 +291,7 @@
   }
  },
  "log": [
+  "/inbox/comments/6af23c7fd3b4d2eb3da204e2 {'accountId': '6af1dc2866c21ac356665764', 'platform': 'tiktok', 'limit': 100} -> HTTP 500: {\"error\":\"Failed to fetch comments\"}",
   "/inbox/comments/6af23c7ed3b4d2eb3da204d7 {'accountId': '6af1dc2866c21ac356665764', 'platform': 'tiktok', 'limit': 100} -> HTTP 400: {\"error\":\"Post 6af23c7ed3b4d2eb3da204d7 has no platform post ID yet (status: partial). The post may still be processing or failed to publish.\",\"type\":\"invalid_request_error\",\"code\":\"invalid_field_value\"}"
  ]
 }
