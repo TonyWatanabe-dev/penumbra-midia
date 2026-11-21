@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-21T06:18:27.736611+00:00",
+ "atualizado": "2026-11-21T18:53:28.789876+00:00",
  "posts": {
   "espelho/parte1.mp4": {
    "publicado": "2026-11-11T15:00:00.000Z",
@@ -36,24 +36,6 @@
      },
      "escolha_123": {
       "1": 3,
-      "2": 0,
-      "3": 0
-     }
-    },
-    "youtube": {
-     "url": "https://www.youtube.com/watch?v=tmz3ipzp6WU",
-     "status": "published",
-     "comentarios_lidos": 0,
-     "votos": {
-      "1": 0,
-      "2": 0
-     },
-     "votos_ab": {
-      "A": 0,
-      "B": 0
-     },
-     "escolha_123": {
-      "1": 0,
       "2": 0,
       "3": 0
      }
@@ -98,24 +80,6 @@
      "url": "https://www.tiktok.com/@penumbra067/video/7706651168407063828",
      "status": "published",
      "comentarios_lidos": 1,
-     "votos": {
-      "1": 0,
-      "2": 0
-     },
-     "votos_ab": {
-      "A": 0,
-      "B": 0
-     },
-     "escolha_123": {
-      "1": 0,
-      "2": 0,
-      "3": 0
-     }
-    },
-    "youtube": {
-     "url": "https://www.youtube.com/watch?v=9clUKPajv5M",
-     "status": "published",
-     "comentarios_lidos": 0,
      "votos": {
       "1": 0,
       "2": 0
@@ -183,24 +147,6 @@
       "2": 1,
       "3": 0
      }
-    },
-    "youtube": {
-     "url": "https://www.youtube.com/watch?v=zigbUr8PiOU",
-     "status": "published",
-     "comentarios_lidos": 0,
-     "votos": {
-      "1": 0,
-      "2": 0
-     },
-     "votos_ab": {
-      "A": 0,
-      "B": 0
-     },
-     "escolha_123": {
-      "1": 0,
-      "2": 0,
-      "3": 0
-     }
     }
    },
    "votos_total": {
@@ -255,24 +201,6 @@
       "2": 0,
       "3": 0
      }
-    },
-    "youtube": {
-     "url": "https://www.youtube.com/watch?v=naQwwlCo8aI",
-     "status": "published",
-     "comentarios_lidos": 0,
-     "votos": {
-      "1": 0,
-      "2": 0
-     },
-     "votos_ab": {
-      "A": 0,
-      "B": 0
-     },
-     "escolha_123": {
-      "1": 0,
-      "2": 0,
-      "3": 0
-     }
     }
    },
    "votos_total": {
@@ -291,10 +219,6 @@
   }
  },
  "log": [
-  "/inbox/comments/6af23c7fd3b4d2eb3da204e2 {'accountId': '6af1dd1064a092d1415a538f', 'platform': 'youtube', 'limit': 100} -> HTTP 404: {\"error\":\"The YouTube video was not found. It may have been deleted or is unavailable.\",\"type\":\"platform_error\",\"code\":\"platform_api_error\",\"platform\":\"youtube\"}",
-  "/inbox/comments/6af23c7f5a8ddb947e565c09 {'accountId': '6af1dd1064a092d1415a538f', 'platform': 'youtube', 'limit': 100} -> HTTP 404: {\"error\":\"The YouTube video was not found. It may have been deleted or is unavailable.\",\"type\":\"platform_error\",\"code\":\"platform_api_error\",\"platform\":\"youtube\"}",
-  "/inbox/comments/6af1df55e80d007f22c43897 {'accountId': '6af1dd1064a092d1415a538f', 'platform': 'youtube', 'limit': 100} -> HTTP 404: {\"error\":\"The YouTube video was not found. It may have been deleted or is unavailable.\",\"type\":\"platform_error\",\"code\":\"platform_api_error\",\"platform\":\"youtube\"}",
-  "/inbox/comments/6af23c7ed3b4d2eb3da204d7 {'accountId': '6af1dc2866c21ac356665764', 'platform': 'tiktok', 'limit': 100} -> HTTP 400: {\"error\":\"Post 6af23c7ed3b4d2eb3da204d7 has no platform post ID yet (status: partial). The post may still be processing or failed to publish.\",\"type\":\"invalid_request_error\",\"code\":\"invalid_field_value\"}",
-  "/inbox/comments/6af23c7ed3b4d2eb3da204d7 {'accountId': '6af1dd1064a092d1415a538f', 'platform': 'youtube', 'limit': 100} -> HTTP 404: {\"error\":\"The YouTube video was not found. It may have been deleted or is unavailable.\",\"type\":\"platform_error\",\"code\":\"platform_api_error\",\"platform\":\"youtube\"}"
+  "/inbox/comments/6af23c7ed3b4d2eb3da204d7 {'accountId': '6af1dc2866c21ac356665764', 'platform': 'tiktok', 'limit': 100} -> HTTP 400: {\"error\":\"Post 6af23c7ed3b4d2eb3da204d7 has no platform post ID yet (status: partial). The post may still be processing or failed to publish.\",\"type\":\"invalid_request_error\",\"code\":\"invalid_field_value\"}"
  ]
 }
