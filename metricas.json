@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-26T07:33:41.048247+00:00",
+ "atualizado": "2026-11-26T21:09:35.157200+00:00",
  "posts": {
   "espelho/parte1.mp4": {
    "publicado": "2026-11-11T15:00:00.000Z",
@@ -61,10 +61,10 @@
     "instagram": {
      "url": "https://www.instagram.com/reel/Dfk03hMEz8T/",
      "status": "published",
-     "comentarios_lidos": 7,
+     "comentarios_lidos": 5,
      "votos": {
       "1": 1,
-      "2": 1
+      "2": 0
      },
      "votos_ab": {
       "A": 1,
@@ -72,8 +72,8 @@
      },
      "escolha_123": {
       "1": 1,
-      "2": 1,
-      "3": 2
+      "2": 0,
+      "3": 1
      }
     },
     "tiktok": {
@@ -97,7 +97,7 @@
    },
    "votos_total": {
     "1": 1,
-    "2": 1
+    "2": 0
    },
    "votos_ab_total": {
     "A": 1,
@@ -105,8 +105,8 @@
    },
    "escolha_123_total": {
     "1": 1,
-    "2": 1,
-    "3": 2
+    "2": 0,
+    "3": 1
    }
   },
   "casa-da-vo/parte1.mp4": {
